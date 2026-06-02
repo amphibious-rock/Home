@@ -1,0 +1,40 @@
+
+<centre style="font-family:verdana ;font-size:300%;">
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 5, 2030 15:37:25").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  //var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  //var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + " days until scotsman"// + hours + "h "
+  //+ minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+<p style="color:red">Prepare for doomsday</p>
+
+<img width="75%"src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.railadvent.co.uk%2Fwp-content%2Fuploads%2F2022%2F09%2FFlying-Scotsman-Swanage-March-2019-ANDREW-PM-WRIGHT-4-002-1080x720.jpg&f=1&nofb=1&ipt=2ebc7ff49ea0f44bf3bd0a95e2b7c8e9a1a73ce5f7765022481e58cf5172fc3c">
+
+</centre>
